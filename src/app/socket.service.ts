@@ -7,8 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class SocketService {
   socket: any;
-  port: string = '3000';
-  readonly url: string = `ws://192.168.1.14:3000`;
+  readonly url: string = `https://chat-ng.herokuapp.com`;
 
   constructor() {
     this.socket = io(this.url);

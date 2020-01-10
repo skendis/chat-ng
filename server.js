@@ -12,4 +12,19 @@ app.get('/*', function(req,res) {
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+const server = app.listen(process.env.PORT || 8080);
+const io = require('socket.io')(server);
+
+let users = [];
+io.on('connection', (socket) => {
+  users.push(socket)
+  io.emit('connected-users',users.length);
+  socket.on('chat-message',(message)=>{
+    socket.broadcast.emit('chat-message',message);
+  });
+  socket.on('disconnect', () => {
+    users.splice(0,1)
+    socket.broadcast.emit('connected-users',users.length);
+  });
+});
+
