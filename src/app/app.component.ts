@@ -36,11 +36,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.socketService.listen('chat-message').subscribe((data) => {
-      console.log(data)
       this.messages.push(data);
     });
     this.socketService.listen('connected-users').subscribe((data: number) => {
       this.connectedUsersCount = data;
     });
+    const historySub = this.socketService.listen('chat-history').subscribe((data:any[])=>{
+      this.messages = data;
+      historySub.unsubscribe();
+    })
   }
 }
