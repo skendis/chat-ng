@@ -165,6 +165,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  direction: rtl;
 }
 
 body {
@@ -331,6 +332,7 @@ body {
   overflow-x: hidden;
   padding: 0 16px;
   margin-bottom: 5px;
+  direction: rtl;
 }
 
 .conversation .conversation-container:after {
@@ -352,6 +354,7 @@ body {
   max-width: 85%;
   word-wrap: break-word;
   z-index: -1;
+  direction: rtl;
 }
 
 .message:after {
@@ -368,6 +371,7 @@ body {
   padding: 0 0 0 7px;
   position: relative;
   bottom: -4px;
+  direction: rtl;
 }
 
 .metadata .time {
@@ -485,6 +489,7 @@ body {
   margin: 0;
   outline: none;
   min-width: 50px;
+  padding-right: 20px;
 }
 
 .conversation-compose .photo {

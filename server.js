@@ -16,10 +16,17 @@ const server = app.listen(process.env.PORT || 8080);
 const io = require('socket.io')(server);
 
 let users = [];
+let msgs = []
 io.on('connection', (socket) => {
   users.push(socket)
+  if(msgs.length!==0){
+    for (const historyMsg of msgs) {
+      io.emit('chat-message',historyMsg);
+    }
+  }
   io.emit('connected-users',users.length);
   socket.on('chat-message',(message)=>{
+    msgs.push(message);
     socket.broadcast.emit('chat-message',message);
   });
   socket.on('disconnect', () => {
