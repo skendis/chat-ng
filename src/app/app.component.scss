@@ -231,8 +231,8 @@ body {
 
 .user-bar {
   height: 55px;
-  background: #005e54;
-  color: #fff;
+  background: #060606;
+  color: #0480ff;
   padding: 0 8px;
   font-size: 24px;
   position: relative;
@@ -306,7 +306,7 @@ body {
 .conversation {
   height: calc(100% - 12px);
   position: relative;
-  background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+  background: #efe7dd url("/assets/bg.jpg") repeat;
   z-index: 0;
 }
 
@@ -342,7 +342,7 @@ body {
 /* Messages */
 
 .message {
-  color: #000;
+  color: #fff;
   clear: both;
   line-height: 18px;
   font-size: 15px;
@@ -371,7 +371,7 @@ body {
 }
 
 .metadata .time {
-  color: rgba(0, 0, 0, .45);
+  color: rgba(127, 127, 127);
   font-size: 11px;
   display: inline-block;
 }
@@ -419,7 +419,7 @@ body {
 }
 
 .message.received {
-  background: #fff;
+  background: #0e273b;
   border-radius: 0px 5px 5px 5px;
   float: left;
 }
@@ -430,20 +430,20 @@ body {
 
 .message.received:after {
   border-width: 0px 10px 10px 0;
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent #0e273b transparent transparent;
   top: 0;
   left: -10px;
 }
 
 .message.sent {
-  background: #e1ffc7;
+  background: #174e77;
   border-radius: 5px 0px 5px 5px;
   float: right;
 }
 
 .message.sent:after {
   border-width: 0px 0 10px 10px;
-  border-color: transparent transparent transparent #e1ffc7;
+  border-color: transparent transparent transparent #174e77;
   top: 0;
   right: -10px;
 }
@@ -462,15 +462,16 @@ body {
 
 .conversation-compose div,
 .conversation-compose input {
-  background: #fff;
+  background: #060606;
   height: 100%;
+  color: #fff;
 }
 
 .conversation-compose .emoji {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: #060606;
   border-radius: 5px 0 0 5px;
   flex: 0 0 auto;
   margin-left: 8px;
@@ -496,7 +497,7 @@ body {
 
 .conversation-compose .photo:after {
   border-width: 0px 0 10px 10px;
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent #060606;
   border-style: solid;
   position: absolute;
   width: 0;
@@ -529,7 +530,7 @@ body {
 }
 
 .conversation-compose .send .circle {
-  background: #008a7c;
+  background: #0480ff;
   border-radius: 50%;
   color: #fff;
   position: relative;
