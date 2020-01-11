@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
   users.push(socket)
   if(msgs.length!==0){
     for (const historyMsg of msgs) {
-      io.emit('chat-message',historyMsg);
+      socket.emit('chat-message',historyMsg);
     }
   }
   io.emit('connected-users',users.length);
