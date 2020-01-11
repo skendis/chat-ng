@@ -153,7 +153,18 @@
 //  color: $bg;
 //}
 
-
+.sticky-top{
+  position: sticky;
+  top:0;
+  right:0;
+  left:0;
+}
+.sticky-bottom{
+  position: sticky;
+  bottom:0;
+  right:0;
+  left:0;
+}
 
 
 *, *:before, *:after {
@@ -367,8 +378,9 @@ body {
 
 .metadata {
   display: inline-block;
-  float: right;
-  padding: 0 0 0 7px;
+  float: left;
+  //padding: 0 0 0 7px;
+  padding-right:7px;
   position: relative;
   bottom: -4px;
   direction: rtl;
@@ -582,6 +594,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    //height: 100vh;
   }
 
   .conversation {
@@ -589,5 +602,17 @@ body {
   }
   .conversation .conversation-container {
     height: calc(100vh - 120px);
+    //height: 100vh;
   }
+  .conversation-compose{
+    position: fixed;
+    bottom:0;
+  }
+  .user-bar{
+    position: sticky;
+    top:0;
+    right:0;
+    left:0;
+  }
+
 }
