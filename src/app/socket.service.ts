@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import * as io from 'socket.io-client';
 import {Observable} from 'rxjs';
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocketService {
   socket: any;
-  readonly url: string = `https://chat-ng.herokuapp.com`;
+  readonly url: string = environment.serverUrl;
 
   constructor() {
     this.socket = io(this.url);
